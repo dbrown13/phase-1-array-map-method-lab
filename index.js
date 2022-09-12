@@ -12,5 +12,24 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
-}
+  return tutorials.map((sentence) => {
+    const wordsSplit = sentence.split(" ");
+    const capitalWords = wordsSplit.map(
+      (word) => word.charAt(0).toUpperCase() + word.slice(1)
+    );
+    const returnedStatement = capitalWords.join(" ");
+    return returnedStatement;
+  });
+};
+  // 1. take a string, and capitalize the first letter
+  // 1a. access the first letter
+  // 1b. capitalize it
+
+  // 2. Capitalize the first letter of every word in a string
+  // 2a. Separate each word, separated by the space
+  // push, pop, splice, slice
+
+
+// function capitalize(word) {
+//   return word[0].toUpperCase() + word.slice(1);
+// }
